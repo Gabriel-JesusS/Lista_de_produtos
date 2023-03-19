@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@font-face {
+    font-family: marske;
+    src: url('src/fonts/Marske.otf');
+}
+
+* {
+    padding: 0px;
+    margin: 0;
+}
+
+body {
+    background-image: url('src/wp6899583.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+
+    text-align: center;
+    font-size: xxx-large;
+    height: 200px;
+    color: yellow;
+    font-family: marske;
+
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    max-width: 350px;
+    height: 270px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    margin-right: 10px;
+}
+
+label {
+    font-size: large;
+    color: #1b1a1a;
+    font-family: 'Russo One', sans-serif;
+    text-shadow: -2px -1px 1px yellow;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    float: center;
+
+}
+
+:placeholder-shown {
+    color: yellow;
+}
+
+input {
+    font-size: large;
+    display: flexbox;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 90%;
+    outline: none;
+    background-color: #252525;
+    color: yellow;
+    box-shadow: -1px -1px 0px rgb(255, 254, 254);
+}
+
+button {
+    margin-top: 10px;
+    appearance: none;
+    background-color: aliceblue;
+    border: none;
+    background-color: yellow;
+    color: #252525;
+    font-size: medium;
+    font-family: 'Russo One', sans-serif;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+
+button:hover {
+    background-color: rgb(211, 211, 44);
+
+}
+
+table {
+    font-family: 'Russo One', sans-serif;
+    color: #fff;
+    text-shadow: 0px 2px 0px #000;
+    text-align: center;
+    width: 330px;
+    padding: 10px;
+    padding-left: 10px;
+    border-collapse: collapse;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.05);
+
+}
+td{
+    overflow: hidden;
+}
+
+thead {
+    background-color: yellow;
+    border: 2px solid #000;
+    color: #252525;
+    text-shadow: none;
+
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    height: 55px;
+
+    background-size: cover;
+    margin-top: 5px;
+    background-size: cover;
+
+}
+
+p{
+    text-align: center;
+    background-color: yellow;
+    font-family: 'Russo One', sans-serif;
+    max-width: 330px;
+    border: 2px solid #000;
+    border-bottom: none;
+    border-top-right-radius: 10px;
+}
+
+/* responsividade para o celular  */
+
+@media screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin-left: 25px;
+        position: relative;
+        top: -80px;
+    }
+
+    .card {
+        max-width: 300px;
+        height: 250px;
+        margin-bottom: 25px;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    table {
+        border-radius: 30px;
+    }
+
+    p{
+        width: 326px;
+    }
+
+}
