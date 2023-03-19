@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url('src/backgroundMountain.webp');
+    background-image: url('src/mountain.webp');
     background-size: cover;
     background-attachment: fixed;
 }
