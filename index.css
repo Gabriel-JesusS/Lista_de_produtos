@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
-@font-face {
-    font-family: marske;
-    src: url('src/fonts/Marske.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     padding: 0px;
@@ -11,19 +7,26 @@
 }
 
 body {
-    background-image: url('src/mountain.webp');
+    background-color: #333232;
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 header {
-
     text-align: center;
-    font-size: xxx-large;
+    font-size: x-large;
     height: 200px;
-    color: yellow;
-    font-family: marske;
+    color: #252525;
+    font-family: 'Bebas Neue', cursive;
+    animation: text 5s linear infinite;
+    transition: color 1ms ease;
+    text-shadow: -1px 1px 5px yellow;
 
+    height: 60px;
+    background-color: yellow;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .card {
@@ -33,23 +36,26 @@ header {
     max-width: 350px;
     height: 270px;
     padding: 10px;
-    backdrop-filter: blur(5px);
+    background-color: #1f1f1f;
     margin-right: 10px;
+    box-shadow: 3px 5px 10px #000;
+
 }
 
 label {
     font-size: large;
-    color: #1b1a1a;
+    color: #d9d4d4;
     font-family: 'Russo One', sans-serif;
-    text-shadow: -2px -1px 1px yellow;
 }
 
 
 .container {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     justify-items: center;
     float: center;
+
 
 }
 
@@ -66,7 +72,7 @@ input {
     width: 90%;
     outline: none;
     background-color: #252525;
-    color: yellow;
+    color: white;
     box-shadow: -1px -1px 0px rgb(255, 254, 254);
 }
 
@@ -101,17 +107,20 @@ table {
     padding: 10px;
     padding-left: 10px;
     border-collapse: collapse;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 2px 5px 5px #1f1f1f;
+    background-color: #1f1f1f;
+    border: #000;
+    margin-bottom: 20px;
 
 }
-td{
+
+td {
     overflow: hidden;
 }
 
 thead {
     background-color: yellow;
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
     color: #252525;
     text-shadow: none;
 
@@ -123,34 +132,32 @@ thead {
 
 img {
     height: 55px;
-
+    width: 65px;
+    position: relative;
+    top: 2px;
     background-size: cover;
-    margin-top: 5px;
-    background-size: cover;
-
 }
 
-p{
-    text-align: center;
-    background-color: yellow;
+p {
+    text-align: left;
+    background-color: #1f1f1f;
     font-family: 'Russo One', sans-serif;
     max-width: 330px;
-    border: 2px solid #000;
-    border-bottom: none;
+    padding: 10px;
+    box-shadow: 3px 5px 10px #000;
+    color: #f0eaea;
     border-top-right-radius: 10px;
 }
 
+
 /* responsividade para o celular  */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+
         justify-content: center;
         justify-items: center;
-        margin-left: 25px;
-        position: relative;
-        top: -80px;
     }
 
     .card {
@@ -159,22 +166,11 @@ p{
         margin-bottom: 25px;
     }
 
-    * {
-        overflow-x: hidden;
+    p {
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
-    body {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    table {
-        border-radius: 30px;
-    }
-
-    p{
-        width: 326px;
-    }
 
 }
