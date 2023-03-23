@@ -45,8 +45,9 @@ class Produtos {
 
             //area do codigo de exclusao dos itens da tabela
             let excluir = document.createElement('img');
-            excluir.src = "https://cdn-icons-png.flaticon.com/512/54/54324.png";
+            excluir.src = "src/lixeira.png";
             excluir.style.height = "20px";
+            excluir.style.width = "30px"
             td_acoes.appendChild(excluir);
             excluir.setAttribute('onclick', `produto.excluir(${this.arrayProduto[i].id})`);
 
@@ -58,7 +59,13 @@ class Produtos {
             if (td_img.src == '') imgs.src = 'https://decathlonpro.vtexassets.com/arquivos/ids/2446149/no-image.jpg?v=637140178423230000';
             td_img.appendChild(imgs);
 
+           
+            //estilo padrão para tag tr da tabela centralização da imagem;
+            td_img.style.width = "66px";
+
         }
+
+        
 
     }
 
@@ -101,12 +108,8 @@ class Produtos {
         return produto;
     }
 
-
     tratarPrecoProdutos(precoProduto) {
-
         return  `R$ ${precoProduto}`;
-  
-
     }
 
     tratarNomesProdutos(nomeProduto) {
@@ -116,7 +119,8 @@ class Produtos {
     //metodo para verificar a quantidade de produtos na lista;
     numeroItensLista(quantidade) {
         const span = document.querySelector('#quantidadeDeItens');
-        span.innerHTML = quantidade;
+        span.innerHTML = quantidade ;
+       
     }
 
     //verifica se os Dados estão corretos;
@@ -134,11 +138,7 @@ class Produtos {
 
 }
 
-var produto = new Produtos()
-
-
-
-
+var produto = new Produtos();
 
 
 
