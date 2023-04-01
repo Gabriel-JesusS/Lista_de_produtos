@@ -1,0 +1,16 @@
+#imagensFull {
+    height: 400px;
+    width: 400px;
+
+}
+
+body{
+    background-color: #1f1f1f;
+}
+.conteinerImgs {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 100px;
+}
