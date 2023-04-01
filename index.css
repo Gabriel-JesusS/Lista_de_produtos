@@ -4,30 +4,45 @@
 * {
     padding: 0px;
     margin: 0;
+
 }
 
 body {
     background-color: #333232;
-    background-size: cover;
-    background-attachment: fixed;
 
+    animation: sweep .5s ease-in-out;
 }
+
 
 header {
+
     text-align: center;
     font-size: x-large;
-    height: 200px;
-    color: #252525;
-    font-family: 'Bebas Neue', cursive;
-    animation: text 5s linear infinite;
-    transition: color 1ms ease;
-    text-shadow: -1px 1px 5px yellow;
-
     height: 60px;
-    background-color: yellow;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+
 }
+
+h1 {
+   
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 6px 0px 0px #0e0d0d;
+    animation: luz 1500ms ease-in-out infinite;
+    text-decoration: underline;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        margin-left: -10px
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
+
 
 .card {
     background-color: rgba(255, 255, 255, 0.05);
@@ -43,25 +58,48 @@ header {
 }
 
 label {
+     
+ 
     font-size: large;
     color: #d9d4d4;
     font-family: 'Russo One', sans-serif;
+    transition: top  250ms ease-out;
+    
 }
 
+.lampada{
+    height: 200px;
+    width: 300px;
+    position: relative;
+    top: -30px;
+    rotate: 0deg;
+    animation: balanço 5s ease-in-out infinite ;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0px 100px 50px yellow);
+    
+}
 
+@keyframes balanço {
+    25%{
+        rotate: -10deg;
+    }
+    50%{
+        rotate: 10deg;
+    }
+}
 .container {
-    margin-top: 50px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     justify-items: center;
     float: center;
-
 
 }
 
 :placeholder-shown {
     color: yellow;
 }
+
 
 input {
     font-size: large;
@@ -71,10 +109,12 @@ input {
     padding: 5px;
     width: 90%;
     outline: none;
-    background-color: #252525;
+    background-color: #1f1f1f;
+    border: none;
     color: white;
-    box-shadow: -1px -1px 0px rgb(255, 254, 254);
+    box-shadow: 0px 1px 0px rgb(255, 254, 254);
 }
+
 
 button {
     margin-top: 10px;
@@ -136,6 +176,8 @@ img {
     position: relative;
     top: 2px;
     background-size: cover;
+   
+
 }
 
 p {
@@ -147,6 +189,38 @@ p {
     box-shadow: 3px 5px 10px #000;
     color: #f0eaea;
     border-top-right-radius: 10px;
+
+}
+
+details summary {
+    background-color: yellow;
+    border-radius: none;
+    margin-top: 15px;
+    font-family: 'Russo One', sans-serif;
+    color: #252525;
+    transition: margin 250ms ease-out;
+    box-shadow: 2px 5px 5px #1f1f1f;
+    padding: 5px;
+}
+
+details[open] summary {
+
+    margin-bottom: 10px;
+}
+
+
+
+#valorTotal {
+    display: flexbox;
+    text-align: left;
+    background-color: #1f1f1f;
+    font-family: 'Russo One', sans-serif;
+    max-width: 330px;
+    padding: 10px;
+    box-shadow: 3px 0px 0px yellow;
+    color: #d9d4d4;
+
+
 }
 
 
@@ -155,10 +229,15 @@ p {
 @media screen and (max-width: 650px) {
     .container {
         display: grid;
-
         justify-content: center;
         justify-items: center;
     }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
 
     .card {
         max-width: 300px;
