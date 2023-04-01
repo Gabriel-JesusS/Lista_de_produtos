@@ -7,29 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista de Produtos</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="src/logo projeto LP.png">
+    <link rel="shortcut icon" href="src/imgs/lampadaLogoLP.png">
 </head>
 
 <body>
     <header>
-        <h1>Lista de Produtos</h1>
-     
+        <img class="lampada" src="src/imgs/Frame 1.png">
     </header>
     <div class="container">
         <div class="card">
-            <label>Produto:</label>
+            <h1>Crie sua lista</h1>
+            <label id="labelNome">Produto:</label>
             <input id="produto" placeholder="nome do produto">
-            <label>Preço:</label>
+            <label id="labelpreco">Preço:</label>
             <input id="preco" placeholder="preço do produto">
-            <label>Imagem:</label>
+            <label id="lanbelLink">Imagem:</label>
             <input id="img" placeholder="link da imagem ">
             <div>
-                <button onclick="produto.salvar()">salvar</button>
+                <button onclick="produto.salvar()" id="atualizar">salvar</button>
                 <button onclick="produto.cancelar()">cancelar</button>
             </div>
         </div>
         <div>
             <p>Quatidade de produtos: <span id="quantidadeDeItens">0</span></p>
+            <details>
+                <summary>Mais detalhes sobre a sua lista</summary>
+                <h3 id="valorTotal">Valor total do preço: R$ <span id="totalPreco">0</span></h3>
+
+            </details>
             <br>
             <table border="1">
                 <thead>
@@ -38,6 +43,7 @@
                     <th>produto </th>
                     <th>preço </th>
                     <th>deletar</th>
+                    <th>Editar</th>
                 </thead>
                 <tbody id="tbody">
 
