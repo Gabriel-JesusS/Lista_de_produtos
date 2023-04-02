@@ -23,7 +23,7 @@ header {
 }
 
 h1 {
-   
+
     color: yellow;
     font-family: 'Bebas Neue', cursive;
     text-shadow: 6px 0px 0px #0e0d0d;
@@ -58,35 +58,37 @@ h1 {
 }
 
 label {
-     
- 
+
+
     font-size: large;
     color: #d9d4d4;
     font-family: 'Russo One', sans-serif;
-    transition: top  250ms ease-out;
-    
+    transition: top 250ms ease-out;
+
 }
 
-.lampada{
+.lampada {
     height: 200px;
     width: 300px;
     position: relative;
     top: -30px;
     rotate: 0deg;
-    animation: balanço 5s ease-in-out infinite ;
+    animation: balanço 5s ease-in-out infinite;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(0px 100px 50px yellow);
-    
+
 }
 
 @keyframes balanço {
-    25%{
+    25% {
         rotate: -10deg;
     }
-    50%{
+
+    50% {
         rotate: 10deg;
     }
 }
+
 .container {
     margin-top: 150px;
     display: flex;
@@ -160,7 +162,6 @@ td {
 
 thead {
     background-color: yellow;
-    /* border: 2px solid #000; */
     color: #252525;
     text-shadow: none;
 
@@ -176,7 +177,7 @@ img {
     position: relative;
     top: 2px;
     background-size: cover;
-   
+
 
 }
 
@@ -237,11 +238,9 @@ details[open] summary {
         overflow-x: hidden;
     }
 
-
-
     .card {
         max-width: 300px;
-        height: 250px;
+        height: 270px;
         margin-bottom: 25px;
     }
 
